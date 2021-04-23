@@ -1,0 +1,68 @@
+<!--<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Booking List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Booking ID</th>
+            <th>Booked From</th>
+            <th>Booked To</th>
+            <th>No of Adults</th>
+            <th>No of Children</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookingdetails">
+            <td>{{booking.booking_id}}</td>
+            <td>{{booking.booked_from}}</td>
+            <td>{{booking.booked_to}}</td>
+            <td>{{booking.no_of_adults}}</td>
+            <td>{{booking.no_of_children}}</td>
+            <td>{{booking.amount}}</td>
+            <td>
+              <button (click)="removeBookingDetails(booking.booking_id)" class="btn btn-link">Delete</button>
+              <button class="btn btn-link" [routerLink]="['/bookingdetails/bookingdetails',booking.booking_id]">Update</button>
+              <button (click)="updateBooking(booking.booking_id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="addBookingDetails(booking.booking_id)" class="btn btn-info" style="margin-left: 10px">Add</button>
+
+              <button (click)="bookingDetails(booking.booking_id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>-->
+  <div class="container">
+    <h1>All Booking Details</h1>
+</div>
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+          <th>Booking ID</th>
+          <th>Booked From</th>
+          <th>Booked To</th>
+          <th>No of Adults</th>
+          <th>No of Children</th>
+          <th>Amount</th>
+          <th>Actions</th>
+        </tr>
+        <tr *ngFor="let booking of bookingdetails">
+          <td>{{booking.booking_id}}</td>
+          <td>{{booking.booked_from}}</td>
+          <td>{{booking.booked_to}}</td>
+          <td>{{booking.no_of_adults}}</td>
+          <td>{{booking.no_of_children}}</td>
+          <td>{{booking.amount}}</td>
+          
+            <td>
+                <!-- <button class="btn btn-link" (click)="removeTestResult"(t.testResultid)>Remove</button>
+                <button class="btn btn-link" [routerLink]="['/testresult/update',t.testResultid]">update</button> -->
+                <button class="btn btn-link" (click)="removeBookingDetails(booking.booking_id)">Remove</button>
+                <button class="btn btn-link" [routerLink]="['/bookingdetails/bookingdetails',booking.booking_id]">Update</button>
+            </td>
+        </tr>
+    </table>
+</div>

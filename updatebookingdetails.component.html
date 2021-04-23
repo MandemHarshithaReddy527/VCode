@@ -1,0 +1,70 @@
+<!--<h3>Update Booking</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Booking ID</label>
+      <input type="text" class="form-control" id="booking-id" required [(ngModel)]="booking.booking_id" name="booking_id">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Booked From</label>
+      <input type="text" class="form-control" id="booked_from" required [(ngModel)]="booking.booked_from" name="booked_from">
+    </div>
+    <div class="form-group">
+        <label for="name">Booked To</label>
+        <input type="text" class="form-control" id="booked_to" required [(ngModel)]="booking.booked_to" name="booked_to">
+    </div>
+
+    <div class="form-group">
+      <label for="name">No of Adults</label>
+      <input type="text" class="form-control" id="no_of_adults" required [(ngModel)]="booking.no_of_adults" name="no_of_adults">
+    </div>
+    <div class="form-group">
+        <label for="name">No of Children</label>
+        <input type="text" class="form-control" id="no_of_children" required [(ngModel)]="booking.no_of_children" name="no_of_children">
+    </div>
+    <div class="form-group">
+        <label for="name">Amount</label>
+        <input type="text" class="form-control" id="amount" required [(ngModel)]="booking.amount" name="amount">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<div [hidden]="!submitted">
+  <h4>You updated successfully!</h4>
+</div>-->
+<div class="container">
+  <form (ngSubmit)="updateData()">
+    <!-- <div class="form-group">
+          Test Result ID
+          <input class="form-control" [(ngModel)]="test.testResultid" name="testResultid">
+
+      </div> -->
+    <div class="form-group">
+      Booked From
+      <input class="form-group" [(ngModel)]="booking.booked_from" name="booked_from">
+    </div>
+    
+    <div class="form-group">
+
+      Booked To
+      <input class="form-group" [(ngModel)]="booking.booked_to" name="booked_to">
+    </div>
+    <div class="form-group">
+      No of Adults
+      <input class="form-group" [(ngModel)]="booking.no_of_adults" name="no_of_adults">
+    </div>
+    <div class="form-group">
+      No of Children
+      <input class="form-group" [(ngModel)]="booking.no_of_children" name="no_of_children">
+    </div>
+    <div class="form-group">
+      Amount
+      <input class="form-group" [(ngModel)]="booking.amount" name="amount">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">UpdateBookingDetails</button>
+    </div>
+  </form>
+</div>

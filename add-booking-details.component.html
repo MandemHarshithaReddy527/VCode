@@ -1,0 +1,75 @@
+<!--<h3>Create Booking</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Booking ID</label>
+      <input type="text" class="form-control" id="booking_id" required [(ngModel)]="booking.booking_id" name="booking_id">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Booked From</label>
+      <input type="text" class="form-control" id="booked_from" required [(ngModel)]="booking.booked_from" name="booked_from">
+    </div>
+    <div class="form-group">
+        <label for="name">Booked To</label>
+        <input type="text" class="form-control" id="booked_to" required [(ngModel)]="booking.booked_to" name="booked_to">
+    </div>
+    <div class="form-group">
+        <label for="name">No of Adults</label>
+        <input type="text" class="form-control" id="no_of_adults" required [(ngModel)]="booking.no_of_adults" name="no_of_adults">
+      </div>
+
+    <div class="form-group">
+      <label for="name">No of Children</label>
+      <input type="text" class="form-control" id="no_of_children" required [(ngModel)]="booking.no_of_children" name="no_of_children">
+    </div>
+    <div class="form-group">
+        <label for="name">Amount</label>
+        <input type="text" class="form-control" id="amount" required [(ngModel)]="booking.amount" name="amount">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>-->
+<div class="container">
+  <h1>Booking Details Registration Form</h1>
+</div>
+<div class="container">
+  <div>
+      <h3 style="color:red;">{{errorMessage}}</h3>
+      <form [formGroup]="bookingdetailsForm" (ngSubmit)="regBookingDetails()" >
+          <!-- <div class="form-group">
+              <input class="form-control" placeholder="Enter Test Result ID" formControllerName="testResultid">
+
+          </div> -->
+          <div class="form-group">
+              <input class="form-control" placeholder="Enter Booked From" formControlName="booked_from">
+              <!-- <span class="badge badge-warning" *ngIf="testReading.touched && testReading.invalid" >Invalid Reading</span> -->
+
+          </div>
+          <div class="form-group">
+              <input class="form-control" placeholder="Enter Booked To" formControlName="booked_to">
+              <!-- <span class="badge badge-warning" *ngIf="testcondition.touched && testcondition.invalid" >Invalid Condition</span> -->
+          </div>
+          <div class="form-group">
+            <input class="form-control" placeholder="Enter No of Adults" formControlName="no_of_adults">
+            <!-- <span class="badge badge-warning" *ngIf="testcondition.touched && testcondition.invalid" >Invalid Condition</span> -->
+          </div>
+          <div class="form-group">
+            <input class="form-control" placeholder="Enter No of Children" formControlName="no_of_children">
+            <!-- <span class="badge badge-warning" *ngIf="testcondition.touched && testcondition.invalid" >Invalid Condition</span> -->
+        </div>
+        <div class="form-group">
+          <input class="form-control" placeholder="Enter Amount" formControlName="amount">
+          <!-- <span class="badge badge-warning" *ngIf="testcondition.touched && testcondition.invalid" >Invalid Condition</span> -->
+      </div>
+          <div>
+              <button type="submit" class="btn btn-primary" >Submit</button>
+          </div>
+      </form>
+  </div>
+</div>
